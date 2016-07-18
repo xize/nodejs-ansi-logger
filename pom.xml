@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>me.xize.nodeansilogger</groupId>
+	<artifactId>NodeAnsiLogger</artifactId>
+	<version>1.0.0</version>
+	<plugins>
+		<plugin>
+			<groupId>com.github.eirslett</groupId>
+			<artifactId>fronted-maven-plugin</artifactId>
+			<version>LATEST</version>
+			<executions>
+				<execution>
+					<id>install node and npm</id>
+					<phase>generate-resources</phase>
+					<goals>
+						<goal>install-node-and-npm</goal>
+					</goals>
+					<configurations>
+						<nodeVersion>v4.4.7</nodeVersion>
+						<npmVersion>2.15.8</npmVersion>
+					</configurations>
+				</execution>
+				<execution>
+					<id>npm install</id>
+					<phase>generate-resources</phase>
+					<goals>
+						<goal>npm</goal>
+					</goals>
+					<configuration>
+						<arugments>install</arugments>
+					</configuration>
+				</execution>
+				<execution>
+					<id>grunt build</id>
+					<phase>generate-resources</phase>
+					<goals>
+						<goal>grunt</goal>
+					</goals>
+					<configuration>
+						<arguments>--verbose</arguments>
+					</configuration>
+				</execution>
+			</executions>
+		</plugin>
+	</plugins>
+</project>
