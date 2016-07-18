@@ -1,0 +1,15 @@
+<assembly>
+	<formats>
+		  <format>zip</format> 
+	</formats>
+	<fileSets>
+	<outputDirectory>target</outputDirectory>
+		<fileSet>
+			<includes>
+				<include>LICENSE</include>
+				<include>package.json</include>
+				<include>src/*/*</include>
+			</includes>
+		</fileSet>
+	</fileSets>
+</assembly>
