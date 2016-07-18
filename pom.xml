@@ -6,44 +6,46 @@
 	<groupId>me.xize.nodeansilogger</groupId>
 	<artifactId>NodeAnsiLogger</artifactId>
 	<version>1.0.0</version>
-	<plugins>
-		<plugin>
-			<groupId>com.github.eirslett</groupId>
-			<artifactId>fronted-maven-plugin</artifactId>
-			<version>LATEST</version>
-			<executions>
-				<execution>
-					<id>install node and npm</id>
-					<phase>generate-resources</phase>
-					<goals>
-						<goal>install-node-and-npm</goal>
-					</goals>
-					<configurations>
-						<nodeVersion>v4.4.7</nodeVersion>
-						<npmVersion>2.15.8</npmVersion>
-					</configurations>
-				</execution>
-				<execution>
-					<id>npm install</id>
-					<phase>generate-resources</phase>
-					<goals>
-						<goal>npm</goal>
-					</goals>
-					<configuration>
-						<arugments>install</arugments>
-					</configuration>
-				</execution>
-				<execution>
-					<id>grunt build</id>
-					<phase>generate-resources</phase>
-					<goals>
-						<goal>grunt</goal>
-					</goals>
-					<configuration>
-						<arguments>--verbose</arguments>
-					</configuration>
-				</execution>
-			</executions>
-		</plugin>
-	</plugins>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>com.github.eirslett</groupId>
+				<artifactId>fronted-plugins</artifactId>
+				<version>1.1-SNAPSHOT</version>
+				<executions>
+					<execution>
+						<id>install node and npm</id>
+						<phase>generate-resources</phase>
+						<goals>
+							<goal>install-node-and-npm</goal>
+						</goals>
+						<configuration>
+							<nodeVersion>v4.4.7</nodeVersion>
+							<npmVersion>2.15.8</npmVersion>
+						</configuration>
+					</execution>
+					<execution>
+						<id>npm install</id>
+						<phase>generate-resources</phase>
+						<goals>
+							<goal>npm</goal>
+						</goals>
+						<configuration>
+							<arugments>install</arugments>
+						</configuration>
+					</execution>
+					<execution>
+						<id>grunt build</id>
+						<phase>generate-resources</phase>
+						<goals>
+							<goal>grunt</goal>
+						</goals>
+						<configuration>
+							<arguments>--verbose</arguments>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
 </project>
