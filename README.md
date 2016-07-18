@@ -1,6 +1,6 @@
 
 
-# NodeLogger
+# NodeAnsiLogger
 
 a easy to use library to support ansi text colors into the console.
 
