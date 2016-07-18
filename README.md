@@ -8,9 +8,9 @@ a easy to use library to support ansi text colors into the console.
 
 in your project just include Logger.js and ConsoleColor.js inside the project.
 after that use the following code:
-[code]
-var logger = require("./Logger.js"); // depending the logger file is inside the root.
-[/code]
+```
+var logger = require("./Logger.js"); // assuming the logger file is inside the root.
+```
 
 then when you want to print something to the console you can do:
 
