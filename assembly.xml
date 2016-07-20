@@ -3,7 +3,6 @@
 		  <format>zip</format> 
 	</formats>
 	<fileSets>
-	<outputDirectory>target</outputDirectory>
 		<fileSet>
 			<includes>
 				<include>LICENSE</include>
